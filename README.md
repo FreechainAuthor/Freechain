@@ -21,7 +21,6 @@ It should be clear that by sacrificing the token transmittal feature of transact
 
 
 # 1	Using Freechain
--------------------
 
 A main goal of Freechain is that users who want to use Freechain generally  mine the tokens they need themselves:
 *	If a user doesn’t have enough computing power to solve a block and collect the mining reward himself he should join a mining pool.  The user generates a new address and transmits it to the pool. The private key to the address is kept safe by the user. The pool uses the address as one of the reward addresses. When the pool solves a block the user gets credited a fraction of the mining earnings (reward and transaction fees) proportional to his computing power. The user gets notified by the pool and can then use the amount on his address. If he wants to continue mining with the pool he must generate a new address and transmit it to the pool.
@@ -31,7 +30,6 @@ A main goal of Freechain is that users who want to use Freechain generally  mine
 *	Traditional exchanges where users can buy and sell tokens cannot trade Freechain tokens because they cannot be transferred between addresses. It is expected that a new form of marketplace will appear which is rather a platform that bring users and cloud miners together and help them setting up the mining contract.
 
 # 2	Tokens and rewards
-----------------------
 
 Users which do not currently or in the near future need tokens to store data on the blockchain are encouraged to mine with a small fraction of their spare computing power. This helps to keep the network distributed and healthy. This behaviour is called “non-profit  mining”. The costs for the user are negligible if the users computer  is running and connected to the internet anyway. But why should anybody do this for free?
 Many people around the globe donate computing power and space to projects of the BOINC network in a philanthropic intent without financial compensation (best known is the SETI@Home project to search for extra terrestrial intelligence). It is expected that many people will donate a bit of spare computing power and disk space to Freechain since a non-profit oriented blockchain is a fundamental achievement for humanity.
@@ -41,6 +39,7 @@ Non-profit miners should only mine with small amounts of spare computing power a
 Non-profit miners are encouraged not to sell mined tokens they don’t need themselves directly. Instead they should reduce the computing power they use for Freechain until they need more tokens or when they detect that the network is attacked (see chapter 6 below). Unused tokens will become invalid after approximately 2 years. This is not a problem for the network as there is always fresh supply of tokens. If a non-profit miner does not want to have his tokens invalidated he can donate the tokens (in fact the private keys to the addresses holding them) to any charity organization that wants to store any data in the blockchain.
 
 ## 2.1	Rewards
+
 The reward for a solved block is 1 full token in the beginning and then increases. It can be split on several addresses but all addresses must be new i.e. have never been used in the blockchain before. After 50’000 blocks the reward increases by 1%. After 500’000 blocks (approximately 1 year) the reward has increased 10 times by 1%. The block reward is then
 1.01^10 = 1.1046 token
 This will lead to significant inflation but the exact inflation is not easy  to predict because tokens are worthless/unusable after 1’000’000 blocks (approximately 2 years). If the users spend all tokens before they invalidate the inflation and tokens in circulation are shown in the [see graph in the pdf white paper].
@@ -87,7 +86,6 @@ The Freechain Client will not accept empty or too low filled blocks when there a
 *	Unconfirmed transactions amount to more than 100% of the current maximum block size
 
 # 4	Mining and proof algorithm
-------------------------------
 
 ## 4.1	Proof of Work against Proof of Stake
 
@@ -213,7 +211,6 @@ The security of the Freechain blockchain structure has been discussed considerin
 Lastly the possibility to use Freechain for physical and virtual object representation is explored. The objects can be defined and transferred to other owners by using tags. Transactions can also be used to store code in plain text which can be executed by a suitable compiler or interpreter.
 
 # Afterword
------------
 
 As the Freechain token is not a currency, it should not bear the word “coin” in it’s name. Since it’s main function is to limit the amount of data a user can put on the block chain a good name for it would be Anti Bloat and Spam Token abbreviated as ABST.
 Although having programmed for more than half of my live in different languages such as Visual Basic, Fortran and C++ I do not have the intention of programming Freechain myself due to lack of time and programming skills in the field of cryptography. If you are interested to contribute please add code to this repository.
