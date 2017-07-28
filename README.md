@@ -3,6 +3,8 @@
 
 Please read the pdf white paper under https://www.dropbox.com/s/0z267djvhv1s6dg/Freechain_V01.pdf?dl=0
 
+If you want to support this project financially please send any amount of bitcoins to 167BDaSPqCntEX8xZsAQzpwaoZZkStdYz6
+
 # Summary
 
 During the last years many blockchains have emerged for record keeping as it came clear the bitcoin blockchain will never be able to host financial transactions and data records both. Most of these blockchains are touted for business use cases by well funded startups. The value of their tokens are fluctuating heavily on exchanges due to speculative frenzy. This in turn makes the use of these blockchains less user-friendly as the future costs of using them is hard to predict.
