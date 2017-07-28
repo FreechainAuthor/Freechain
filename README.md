@@ -1,4 +1,4 @@
-# __Freechain__
+# _**Freechain**_
 
 Please read the pdf white paper under https://www.dropbox.com/s/0z267djvhv1s6dg/Freechain_V01.pdf?dl=0
 
