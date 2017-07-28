@@ -46,7 +46,8 @@ This will lead to significant inflation but the exact inflation is not easy  to 
 
 The inflation is extremely high in the beginning but will stabilize after 30 years  at approximately 10.5%. The high inflation in first years  should deter speculative mining in the beginning even if utilization of Freechain is progressing very quickly i.e. all tokens are used before they expire. If no tokens are used before they expire the inflation and tokens in circulation are shown in the [see graph in the pdf white paper].
 
-The inflation stabilizes after 3 years at approximately 10.5%. If no tokens are used before they invalidate it is a sign that Freechain isn’t gaining traction quickly and therefore a modest inflation is sufficient to deter speculative mining. Note that in this case no transaction fees are paid and collected by miners. If a part of the tokens are used before they expire the curves are in between but the inflation stabilizes after some years at 10.5% as well.
+The inflation stabilizes after 3 years at approximately 10.5%. If no tokens are used before they invalidate it is a sign that Freechain isn’t gaining traction quickly and therefore a modest inflation is sufficient to deter speculative mining. Note that in this case no transaction fees are paid and collected by miners. 
+If a part of the tokens is used before they expire the curves are in between but the inflation stabilizes after some years at 10.5% as well.
 The tokens in circulation go to infinite. This will deter investors definitely but is no problem for users who want to store data in the blockchain. 
 The block reward grows by a factor of 10 approximately every 23 years. Should the numbers become too large, a merge of 1’000 tokens into 1 can be performed after 69 years for practical purpose. The block reward would at the same time shrink by a factor of 1000.
 
