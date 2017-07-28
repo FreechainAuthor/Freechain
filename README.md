@@ -67,14 +67,15 @@ Freechain does not have input values (except the fee itself) therefore in the Fr
 Priority in Freechain = sum(fee_value * transaction_age)/size_in_bytes
 It has to be noted that transaction age is not an absolute value, it depends on when the miner receives the transaction. It is anticipated that non-profit miners will stick to the default priority setting. Profit oriented miners however, as in bitcoin mining, may choose to take over only the transactions with the highest fee per size ratio. 
 Why is the age of the input token not considered as in bitcoin? This would pose an incentive to use (and possibly hoard or buy) old tokens and would be detrimental to demonetizing the token. Instead the age of the transaction is used. 
-2.3	Replace by Fee (RBF)
+
+## 2.3	Replace by Fee (RBF)
+
 Already in the early versions of bitcoin existed a mechanism which is called “replace by fee”. The RBF mechanism in bitcoin was disabled due to security concerns by Satoshi himself in 2010 and activated again in Bitcoin Core 0.12.0 in 2016. It is explained in more detail in https://en.bitcoin.it/wiki/Transaction_replacement
 The purpose of RBF is to speed up the confirmation of a transaction by increasing the fee after the transaction has been broadcasted already. If a protocol does not allow this mechanism explicitly, an updated transaction would be seen as a double spend attack and network nodes would not accept the updated transaction. Therefore it is important to have this feature described in detail here. For Freechain this feature is even more important because it is expected that at times there is much higher demand to store data in Freechain than available block space. In such a situation it must be possible for users to speed up the confirmation of their transaction by increasing the fee after the transaction has been transmitted already.
 There has been a lot of controversy in the bitcoin community about this topic. The logical solution to only update the transaction with a higher fee input is called first seen safe (FSS). The transaction content and outputs must otherwise remain identical.  FSS RBF is not easy to implement in the bitcoin protocol and impractical for users due to the bitcoin transaction structure. Furthermore it would reduce the anonymity of bitcoin because the change address is clearly visible for all network participants. Refer also to this article for further reading: http://blog.greenaddress.it/2015/12/09/why-replace-by-fee-is-good-for-bitcoin/
 In Freechain it is much easier to use FSS RBF. The transaction data content is not allowed to be modified. Allowed changes are only the fee amount and the change amount. Since in Freechain no value transfer is allowed, the input address is always the output address for the change. If the input address does not hold enough value to increase the fee, another input address can be added. In such a case the added address must receive the change and the first input address must be depleted completely.
  
-3	Block structure
------------------
+# 3	Block structure
 
 The maximum allowed block size is 10MiB in the beginning and then follows almost Nielsen’s Law for Bandwidth and Moore’s law for computing power:  The block size will double every 1’000’000 Blocks (approximately 2 years). This results in exponential growth which is needed for large user adoption but should be manageable from a hardware perspective.
 As Moore’s law may not continue forever, the miners shall have a veto right to prevent the doubling of the block size. If 30% of the 50’000 blocks before the rise are tagged by the miners to not increase the block size the block size will not increase for another 1’000’000 Blocks. Note that the miners must take action to prevent increase of the block size not vice versa.
@@ -100,7 +101,6 @@ Recent advancements in the field of memory hard PoW algorithms have improved the
 Freechain will only be attractive for large professional miners when they can sell their hash power in cloud mining contracts. When most users run the PoW Algorithm to meet their own demand of tokens ideally only relatively few cloud mining contracts are ordered. This way Freechain mining will remain a niche market for large professional miners and there is less incentive to develop specialized hardware for it’s PoW algorithm.
 
 # 5	Inadequate content filtering vs censorship
-----------------------------------------------
 
 A big problem is if users store data on the Freechain blockchain with inadequate content e.g. anything which violates human rights. This problem is generic to all public blockchains but worse in Freechain since it allows larger amounts of data in one transaction. It is the opinion of the author that as for the internet itself, search and service providers should provide efficient filters to hide inadequate content from users/readers by default. If a user turns off such filtering it is at his own responsibility. Nevertheless the blockchain should not be a help to distribute and store inadequate content in eternity. On the other hand content filtering is a sort of censorship and who decides what content shall be stored and what not? A balanced approach is described as follows:
 Every miner / user / full node is free to prune inadequate content out of a block and only keep neutral aspects of the block such as the merkle tree, the transaction signatures and the block header. The transaction signatures shall be designed in a way that allows to verify that the transaction has been signed by somebody who has the private keys to the input addresses even if the transaction data content has been deleted.
@@ -110,7 +110,6 @@ Imagine one single user wants to store some really sick data all other users/nod
 It is to be hoped that above facts deter users to publish inadequate data. After all, blockchains are a very democratic data structure.
 
 # 6	Security
-------------
 
 As one address can never be topped up, active users will use several addresses over time. These addresses are randomly generated, so how can others be sure that the transactions were published by the same user? This problem becomes more aggravated if users buy tokens directly from miners or resell the address to a second user after having used only a fraction of the tokens (although that’s not recommended).
 It is encouraged that every user adds an originator signature to his transactions. This is the transaction content encrypted with a separate private key (not the private key to the input address). The public key for this signature can be disclosed off-chain (i.e. website of a company or email) or kept private and only shared with auditors / authorities or disclosed on request. The public key for this originator signature should remain constant over longer periods of time to make auditing plausible. If the private key is stolen the owner should file a transaction in clear text with the clear message that this key combination is compromised and a new pair will be used. After such a transaction all transactions signed with this key can be disregarded.
@@ -118,6 +117,7 @@ If the private key is lost (not stolen but forgotten) this entity also looses cr
 Further developments on hierarchical deterministic key generation (see “Hierarchical deterministic Bitcoin wallets that tolerate key leakage”, Gutoski and Stebila, 2015) will make it much easier and safer to manage private and public keys in larger organizations by using master keys. Progress in this field shall be considered in the  Freechain client.
 
 ## 6.1	51% Attack
+
 A 51% attack (http://en.bitcoinwiki.org/Bitcoin_weaknesses#51.25_attack) is at first glance not so dangerous for Freechain as for another blockchain. Double-spending of tokens is economically not interesting because the receiver of the spent tokens is always a miner as they cannot be transferred to another address. In the best case a 51% attacker can transfer his tokens to himself!
 However the risk of double issuing contradicting records has to be considered. It is important to understand exactly what a 51% attacker can and what he cannot do. The first and foremost requirement is that a 51% attacker can only succeed if the victim (or a third party!) has no objective reason to distrust the attacker. Consequently the attacker cannot violate any of the rules a blockchain is based on. This excludes therefore the following possibilities:
 •	An attacker cannot spend tokens from other addresses where he has no private key for.
@@ -129,6 +129,7 @@ The following actions are possible for a 51% attacker:
 •	create 2 (or more!) competing versions of the blockchain. If he has enough hash power and time he can go further back in time and produce an alternate chain which when it has reached equal length as the true chain cannot be revealed as the attack chain by a third party. This is probably the most dangerous scenario for Freechain and blockchains in general.
 
 ### 6.2	Defense mechanisms against a 51% attack
+
 In this chapter defense mechanisms against the various actions a 51% attacker can perform are discussed.
 
 ### 6.2.1	If a 51% attacker does not confirm other blocks thus receives all new tokens
@@ -167,7 +168,6 @@ If an attacker does not possess 51% hash power of the network he could still try
 Freechain is not immune against attacks to the Freechain client software by such methods. However it is easier to find consensus among developers and miners if the token is demonetized and many users are mining in non-profit mode or for their own requirements only.
 
 # 7	Object representation (“coloured coins”)
---------------------------------------------
 
 Freechain can be easily used for physical or virtual object representation, also known as coloured coins. Physical objects that are predestined for blockchain representation are vehicles, real estate, equipments, luxury goods etc. Virtual objects that are predestined for blockchain representation are licences, permissions, certificates, websites, apps etc.
 Every Freechain transaction can have large free text as content (almost 10’000 characters in the beginning). The easiest implementation is done by using tags (tag1=property1;tag2=property2 etc) to define the object. Possible tag names would be
@@ -201,12 +201,10 @@ As it is not possible in Freechain to transfer tokens from one address to anothe
 The tags can also be abbreviated to save some space. If the object already exists on the blockchain, the originator can refer to this object by using the tag ObjectHash= and the transaction hash representing the object. It is obvious that any transaction that wants to transfer an object without the object originator’s signature is invalid unless the new originator can prove off-chain to be entitled to it (refer also to chapter 6 above about lost or stolen private keys).
 
 # 8	Storing Code in a transaction
----------------------------------
 
 As it is not possible to transfer value in Freechain from one account to another it is not possible to program smart contracts in Freechain. Hence decentralized applications based on smart contracts are not foreseen to be implemented. For such features the use of existing blockchains such as ethereum or Crypti are recommended. However it is possible to store code in a transaction which can be executed by anybody using a suitable interpreter or compiler. Initial tags can instruct which compiler/interpreter should be used. 
 
 # 9	Conclusions
----------------
 
 A blockchain structure for record keeping has been presented which does not need a currency or speculative asset. It’s main intention is that the users are concurrently also miners and behave in a non profit oriented way, similar to BOINC projects such as SETI@home. 
 The token for the blockchain structure is mainly needed to limit the amount of data a user can put on the block chain. The token has been demonetized with several measures to reduce it’s appeal to speculators and investors.
