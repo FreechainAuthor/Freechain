@@ -1,9 +1,8 @@
-Freechain
-=========
+# __Freechain__
 
 
-Summary
--------
+
+# Summary
 
 During the last years many blockchains have emerged for record keeping as it came clear the bitcoin blockchain will never be able to host financial transactions and data records both. Most of these blockchains are touted for business use cases by well funded startups. The value of their tokens are fluctuating heavily on exchanges due to speculative frenzy. This in turn makes the use of these blockchains less user-friendly as the future costs of using them is hard to predict.
 
