@@ -8,11 +8,11 @@ Summary
 During the last years many blockchains have emerged for record keeping as it came clear the bitcoin blockchain will never be able to host financial transactions and data records both. Most of these blockchains are touted for business use cases by well funded startups. The value of their tokens are fluctuating heavily on exchanges due to speculative frenzy. This in turn makes the use of these blockchains less user-friendly as the future costs of using them is hard to predict.
 
 It is important to understand that no blockchain can exist without a token to charge the users to put data on that blockchain. But it is possible to minimize the speculative attractiveness of such a token. The token has effectively to be de-monetized. This means the token shall not resemble a (digital) currency anymore. Freechain will have a token which will differ in the following ways from most other blockchain tokens to prevent speculation:
-•	It is not possible to transfer the token from one address to another (except fees which are collected by the miner).
-•	Tokens held by an address longer than 1’000’000 Blocks (approximately 2 years; target block time is 1 minute) will not be spendable and essentially worthless even if present in the blockchain.
-•	Every new block mined must send the earnings (miner reward and transaction fees) to new addresses not used before. This is the only way to generate new addresses in the blockchain.
-•	An address can never be topped up.
-•	The mining reward is increasing over time. This will prevent speculative mining. Users should mine tokens only shortly before they need them to store data on the blockchain.
+*	It is not possible to transfer the token from one address to another (except fees which are collected by the miner).
+*	Tokens held by an address longer than 1’000’000 Blocks (approximately 2 years; target block time is 1 minute) will not be spendable and essentially worthless even if present in the blockchain.
+*	Every new block mined must send the earnings (miner reward and transaction fees) to new addresses not used before. This is the only way to generate new addresses in the blockchain.
+*	An address can never be topped up.
+*	The mining reward is increasing over time. This will prevent speculative mining. Users should mine tokens only shortly before they need them to store data on the blockchain.
 Freechain is open source and aims to be fully decentralized. Especially the mining of Freechain shall be decentralized as the points above encourage each user to mine his own token needs.
 
 The representation of physical and virtual objects (“coloured coins”) is possible with Freechain. A syntax proposal is given in chapter  7 below. Certain aspects which have to be considered when using Freechain to represent physical and virtual objects are discussed. 
@@ -20,18 +20,18 @@ The representation of physical and virtual objects (“coloured coins”) is pos
 It should be clear that by sacrificing the token transmittal feature of transactions, certain use cases will not be possible with Freechain. Remittances, smart contracts or decentralized applications based on smart contracts are not foreseen to be implemented. For these features the use of existing blockchains such as bitcoin and ethereum are recommended. However it is possible to store code in a transaction which can be executed by anybody using a suitable interpreter or compiler. 
 
 
-1	Using Freechain
------------------
+# 1	Using Freechain
+-------------------
 
 A main goal of Freechain is that users who want to use Freechain generally  mine the tokens they need themselves:
-•	If a user doesn’t have enough computing power to solve a block and collect the mining reward himself he should join a mining pool.  The user generates a new address and transmits it to the pool. The private key to the address is kept safe by the user. The pool uses the address as one of the reward addresses. When the pool solves a block the user gets credited a fraction of the mining earnings (reward and transaction fees) proportional to his computing power. The user gets notified by the pool and can then use the amount on his address. If he wants to continue mining with the pool he must generate a new address and transmit it to the pool.
-•	If not enough tokens can be mined by a user because he does not have enough computational power, he should never directly buy an address with some token. The miner selling the address could sell it to other persons or use it for storing data in the blockchain himself. Either way the user looses some or all of the purchased token.
-•	Instead this user should use a cloud mining contract to acquire more tokens. The user generates a new address and transmits it to the contract miner. The private key to the address is kept safe by the user. The miner uses the address one of the reward addresses. When the miner solves a block the user gets credited the amount as agreed in the contract. The user gets notified and can then use the token on his address. The cloud mining contract is best stored in an smart contract (e.g. ethereum)  to make sure the user really gets his token and the miner gets paid after mining it.
-•	Users are discouraged to hoard tokens because they will loose their value after 1’000’000 Blocks (approximately 2 years). Additionally the mining reward is increasing over time therefore it’s more economical to mine later. They should only (cloud) mine tokens when they intend to use them shortly. Freechain tokens are meant to live from hand to mouth. 
-•	Traditional exchanges where users can buy and sell tokens cannot trade Freechain tokens because they cannot be transferred between addresses. It is expected that a new form of marketplace will appear which is rather a platform that bring users and cloud miners together and help them setting up the mining contract.
+*	If a user doesn’t have enough computing power to solve a block and collect the mining reward himself he should join a mining pool.  The user generates a new address and transmits it to the pool. The private key to the address is kept safe by the user. The pool uses the address as one of the reward addresses. When the pool solves a block the user gets credited a fraction of the mining earnings (reward and transaction fees) proportional to his computing power. The user gets notified by the pool and can then use the amount on his address. If he wants to continue mining with the pool he must generate a new address and transmit it to the pool.
+*	If not enough tokens can be mined by a user because he does not have enough computational power, he should never directly buy an address with some token. The miner selling the address could sell it to other persons or use it for storing data in the blockchain himself. Either way the user looses some or all of the purchased token.
+*	Instead this user should use a cloud mining contract to acquire more tokens. The user generates a new address and transmits it to the contract miner. The private key to the address is kept safe by the user. The miner uses the address one of the reward addresses. When the miner solves a block the user gets credited the amount as agreed in the contract. The user gets notified and can then use the token on his address. The cloud mining contract is best stored in an smart contract (e.g. ethereum)  to make sure the user really gets his token and the miner gets paid after mining it.
+*	Users are discouraged to hoard tokens because they will loose their value after 1’000’000 Blocks (approximately 2 years). Additionally the mining reward is increasing over time therefore it’s more economical to mine later. They should only (cloud) mine tokens when they intend to use them shortly. Freechain tokens are meant to live from hand to mouth. 
+*	Traditional exchanges where users can buy and sell tokens cannot trade Freechain tokens because they cannot be transferred between addresses. It is expected that a new form of marketplace will appear which is rather a platform that bring users and cloud miners together and help them setting up the mining contract.
 
-2	Tokens and rewards
---------------------
+# 2	Tokens and rewards
+----------------------
 
 Users which do not currently or in the near future need tokens to store data on the blockchain are encouraged to mine with a small fraction of their spare computing power. This helps to keep the network distributed and healthy. This behaviour is called “non-profit  mining”. The costs for the user are negligible if the users computer  is running and connected to the internet anyway. But why should anybody do this for free?
 Many people around the globe donate computing power and space to projects of the BOINC network in a philanthropic intent without financial compensation (best known is the SETI@Home project to search for extra terrestrial intelligence). It is expected that many people will donate a bit of spare computing power and disk space to Freechain since a non-profit oriented blockchain is a fundamental achievement for humanity.
@@ -40,7 +40,7 @@ Non-profit miners should only mine with small amounts of spare computing power a
  If a user needs more tokens for storing his own data in Freechain he can ramp up the mining effort to increase the chance of winning a block and join a mining pool if needed. This behaviour is called “power mining”.
 Non-profit miners are encouraged not to sell mined tokens they don’t need themselves directly. Instead they should reduce the computing power they use for Freechain until they need more tokens or when they detect that the network is attacked (see chapter 6 below). Unused tokens will become invalid after approximately 2 years. This is not a problem for the network as there is always fresh supply of tokens. If a non-profit miner does not want to have his tokens invalidated he can donate the tokens (in fact the private keys to the addresses holding them) to any charity organization that wants to store any data in the blockchain.
 
-### 2.1	Rewards
+## 2.1	Rewards
 The reward for a solved block is 1 full token in the beginning and then increases. It can be split on several addresses but all addresses must be new i.e. have never been used in the blockchain before. After 50’000 blocks the reward increases by 1%. After 500’000 blocks (approximately 1 year) the reward has increased 10 times by 1%. The block reward is then
 1.01^10 = 1.1046 token
 This will lead to significant inflation but the exact inflation is not easy  to predict because tokens are worthless/unusable after 1’000’000 blocks (approximately 2 years). If the users spend all tokens before they invalidate the inflation and tokens in circulation are shown in the [see graph in the pdf white paper].
@@ -51,7 +51,7 @@ The inflation stabilizes after 3 years at approximately 10.5%. If no tokens are 
 The tokens in circulation go to infinite. This will deter investors definitely but is no problem for users who want to store data in the blockchain. 
 The block reward grows by a factor of 10 approximately every 23 years. Should the numbers become too large, a merge of 1’000 tokens into 1 can be performed after 69 years for practical purpose. The block reward would at the same time shrink by a factor of 1000.
 
-### 2.2	Fees
+## 2.2	Fees
 
 As Freechain can theoretically survive only with non-profit mining - the only necessity to have tokens is to charge users to put data on the blockchain. Therefore the transaction fees are of great importance.
 The space in Freechain for 1 transaction is much less limited than in bitcoin (with the OP_return function currently only 80 bytes are accepted by the bitcoin client). A transaction in Freechain can be at maximum 1/1000 from the current block size limit (in the beginning 10 MiB/1000 = 10 KiB). However a user can submit many transactions in a short time and fill up significant amount of data in a block. Since there is always too little space for some people/applications, the fees are very important to limit the amount of data a user can store.
@@ -82,24 +82,25 @@ Because Freechain is specifically designed for record keeping and time stamping,
 In order to scale Freechain to a large enough database and reduce the need of full nodes, every user can select to store only full blocks where he has transactions in it. From blocks he has no transactions in it he will only store the block headers. This will probably be the preferred method for mobile devices and users with limited storage capacity.
 If a user wants to prove a certain data record, it is sufficient to disclose the transaction itself, the hash of the transaction and all the hashes along the merkle tree up to the merkle root. The merkle root is stored in the block header which every user should have locally available down to the genesis block. This is similar to the simplified payment verification approach described by Satoshi Nakamoto in the bitcoin white paper.
 The Freechain Client will not accept empty or too low filled blocks when there are too many unconfirmed transactions. This flaw known from the bitcoin blockchain is prohibited in Freechain. The Freechain client denies blocks if these conditions are fulfilled
-•	The block is smaller than 99% of the current maximum block size and
-•	Unconfirmed transactions amount to more than 100% of the current maximum block size
+*	The block is smaller than 99% of the current maximum block size and
+*	Unconfirmed transactions amount to more than 100% of the current maximum block size
 
-4	Mining and proof algorithm
-----------------------------
+# 4	Mining and proof algorithm
+------------------------------
 
-### 4.1	Proof of Work against Proof of Stake
+## 4.1	Proof of Work against Proof of Stake
 
 Proof of stake algorithm is more energy efficient but seen as less safe. The algorithm to choose who’s to mine the next block is perceived as a potential weakness. Furthermore the “nothing at stake” problem is not easy to solve, refer also to https://en.wikipedia.org/wiki/Proof-of-stake#Criticism 
 For these reasons a proof of stake approach is dismissed for Freechain.
-### 4.2	Proof of Work algorithm
+
+## 4.2	Proof of Work algorithm
 
 The proof of work algorithm must be such that specialized hardware doesn’t bring a significant advantage. If the same algortihm as in bitcoin (SHA-256) would be used, the users with access to ASIC hardware would have such a tremendous advantage that normal users wouldn’t have any chance to win a block. For Freechain it’s planned to use a memory hard algorithm similar to Zcash or ethereum. These algorithms are designed in a way that the memory bandwidth is the bottleneck, not the computing power. Therefore adding computing power by ASIC without adding memory bandwidth doesn’t bring an advantage.
 Recent advancements in the field of memory hard PoW algorithms have improved the speed and memory requirements for verification (“Equihash: Asymmetric Proof-of-Work Based on the Generalized Birthday Problem”, Biryukov and Khovratovich, 2016). It is expected that there are further developments on optimized PoW algorithms therefore the PoW algorithm may be updated in a later stage. 
 Freechain will only be attractive for large professional miners when they can sell their hash power in cloud mining contracts. When most users run the PoW Algorithm to meet their own demand of tokens ideally only relatively few cloud mining contracts are ordered. This way Freechain mining will remain a niche market for large professional miners and there is less incentive to develop specialized hardware for it’s PoW algorithm.
 
-5	Inadequate content filtering vs censorship
---------------------------------------------
+# 5	Inadequate content filtering vs censorship
+----------------------------------------------
 
 A big problem is if users store data on the Freechain blockchain with inadequate content e.g. anything which violates human rights. This problem is generic to all public blockchains but worse in Freechain since it allows larger amounts of data in one transaction. It is the opinion of the author that as for the internet itself, search and service providers should provide efficient filters to hide inadequate content from users/readers by default. If a user turns off such filtering it is at his own responsibility. Nevertheless the blockchain should not be a help to distribute and store inadequate content in eternity. On the other hand content filtering is a sort of censorship and who decides what content shall be stored and what not? A balanced approach is described as follows:
 Every miner / user / full node is free to prune inadequate content out of a block and only keep neutral aspects of the block such as the merkle tree, the transaction signatures and the block header. The transaction signatures shall be designed in a way that allows to verify that the transaction has been signed by somebody who has the private keys to the input addresses even if the transaction data content has been deleted.
@@ -108,15 +109,15 @@ The above described censoring is considered fair because although inadequate dat
 Imagine one single user wants to store some really sick data all other users/nodes/miners find inadequate. If all other users remove this data from their local blockchains there is no redundancy at all. Moreover this user has to provide the content himself every time another user wants to read this transaction. This way most benefits of a blockchain disappear for this particular data. The only leftover in the pruned blockchains is a hash proving this data existed at that time. This benefit could have been achieved by the user in a cheaper and better way by only saving the hash of the data in the first place. If law enforcement wants to prosecute said user because the content is a criminal act it is easy to locate said user because no other user will broadcast this transaction content.
 It is to be hoped that above facts deter users to publish inadequate data. After all, blockchains are a very democratic data structure.
 
-6	Security
-----------
+# 6	Security
+------------
 
 As one address can never be topped up, active users will use several addresses over time. These addresses are randomly generated, so how can others be sure that the transactions were published by the same user? This problem becomes more aggravated if users buy tokens directly from miners or resell the address to a second user after having used only a fraction of the tokens (although that’s not recommended).
 It is encouraged that every user adds an originator signature to his transactions. This is the transaction content encrypted with a separate private key (not the private key to the input address). The public key for this signature can be disclosed off-chain (i.e. website of a company or email) or kept private and only shared with auditors / authorities or disclosed on request. The public key for this originator signature should remain constant over longer periods of time to make auditing plausible. If the private key is stolen the owner should file a transaction in clear text with the clear message that this key combination is compromised and a new pair will be used. After such a transaction all transactions signed with this key can be disregarded.
 If the private key is lost (not stolen but forgotten) this entity also looses credibility in the blockchain world. It shows they don’t follow minimum data protection guidelines and can therefore not be trusted. Of course they can issue a new pair and distribute the new public key off-chain but their reputation has suffered a major blow.
 Further developments on hierarchical deterministic key generation (see “Hierarchical deterministic Bitcoin wallets that tolerate key leakage”, Gutoski and Stebila, 2015) will make it much easier and safer to manage private and public keys in larger organizations by using master keys. Progress in this field shall be considered in the  Freechain client.
 
-### 6.1	51% Attack
+## 6.1	51% Attack
 A 51% attack (http://en.bitcoinwiki.org/Bitcoin_weaknesses#51.25_attack) is at first glance not so dangerous for Freechain as for another blockchain. Double-spending of tokens is economically not interesting because the receiver of the spent tokens is always a miner as they cannot be transferred to another address. In the best case a 51% attacker can transfer his tokens to himself!
 However the risk of double issuing contradicting records has to be considered. It is important to understand exactly what a 51% attacker can and what he cannot do. The first and foremost requirement is that a 51% attacker can only succeed if the victim (or a third party!) has no objective reason to distrust the attacker. Consequently the attacker cannot violate any of the rules a blockchain is based on. This excludes therefore the following possibilities:
 •	An attacker cannot spend tokens from other addresses where he has no private key for.
@@ -165,8 +166,8 @@ What if the non-profit miners cannot mobilize enough hash power by their own res
 If an attacker does not possess 51% hash power of the network he could still try to bring confusion to the network, for example regarding the block size debate. Some miners will inevitably feel disadvantaged with larger blocks due to bandwidth and latency constraints. They will always argue and opt for small blocks. If the attacker now deliberately produces more orphaned blocks this will act as a strong argument for these miners. Orphaned blocks are a key metric for a blockchain (see e.g. https://blockchain.info/charts/n-orphaned-blocks ). In a similar way an attacker could try to influence consensus debates for other topics which require a change to the Freechain software. These attacks will have much less severe impacts than the 51% attacks but it’s important to keep it in mind if a group of people wants to change (or preserve!) the code and argument with blockchain metrics.
 Freechain is not immune against attacks to the Freechain client software by such methods. However it is easier to find consensus among developers and miners if the token is demonetized and many users are mining in non-profit mode or for their own requirements only.
 
-7	Object representation (“coloured coins”)
-------------------------------------------
+# 7	Object representation (“coloured coins”)
+--------------------------------------------
 
 Freechain can be easily used for physical or virtual object representation, also known as coloured coins. Physical objects that are predestined for blockchain representation are vehicles, real estate, equipments, luxury goods etc. Virtual objects that are predestined for blockchain representation are licences, permissions, certificates, websites, apps etc.
 Every Freechain transaction can have large free text as content (almost 10’000 characters in the beginning). The easiest implementation is done by using tags (tag1=property1;tag2=property2 etc) to define the object. Possible tag names would be
@@ -189,7 +190,7 @@ The tags can also be abbreviated to save some space. The originator for the tran
 As opposed to bitcoin implementation of coloured coins there is no need to keep a certain coin amount on this transaction (UTXO). There is just the ordinary fee for a transaction of this size. The tags as well as their abbreviations must be standardized in order to allow compatibility between all users who want to represent physical or virtual objects in Freechain. 
 In order to be a credible representation, the originator of the transaction must sign it with a private key (not the private key to the input address). The public key for this signature can be disclosed off-chain (i.e. website of a company or email) or kept private and only shared with auditors / authorities or disclosed on request. Refer also to chapter 6 above.  The easiest way would be when the originator uses the same key as for record keeping.
 
-### 7.1	Transfer of objects
+## 7.1	Transfer of objects
 
 As it is not possible in Freechain to transfer tokens from one address to another there must be another way to transfer the object from one owner to another. The easiest implementation is when the originator of an object uses a tag such as the following:
 •	SoldTo
@@ -199,13 +200,13 @@ As it is not possible in Freechain to transfer tokens from one address to anothe
 •	LeaseBack
 The tags can also be abbreviated to save some space. If the object already exists on the blockchain, the originator can refer to this object by using the tag ObjectHash= and the transaction hash representing the object. It is obvious that any transaction that wants to transfer an object without the object originator’s signature is invalid unless the new originator can prove off-chain to be entitled to it (refer also to chapter 6 above about lost or stolen private keys).
 
-8	Storing Code in a transaction
--------------------------------
+# 8	Storing Code in a transaction
+---------------------------------
 
 As it is not possible to transfer value in Freechain from one account to another it is not possible to program smart contracts in Freechain. Hence decentralized applications based on smart contracts are not foreseen to be implemented. For such features the use of existing blockchains such as ethereum or Crypti are recommended. However it is possible to store code in a transaction which can be executed by anybody using a suitable interpreter or compiler. Initial tags can instruct which compiler/interpreter should be used. 
 
-9	Conclusions
--------------
+# 9	Conclusions
+---------------
 
 A blockchain structure for record keeping has been presented which does not need a currency or speculative asset. It’s main intention is that the users are concurrently also miners and behave in a non profit oriented way, similar to BOINC projects such as SETI@home. 
 The token for the blockchain structure is mainly needed to limit the amount of data a user can put on the block chain. The token has been demonetized with several measures to reduce it’s appeal to speculators and investors.
@@ -213,8 +214,8 @@ In the Freechain blockchain much larger data amounts can be stored than in the b
 The security of the Freechain blockchain structure has been discussed considering different attacking scenarios and defense mechanisms against attacks.
 Lastly the possibility to use Freechain for physical and virtual object representation is explored. The objects can be defined and transferred to other owners by using tags. Transactions can also be used to store code in plain text which can be executed by a suitable compiler or interpreter.
 
-Afterword
----------
+# Afterword
+-----------
 
 As the Freechain token is not a currency, it should not bear the word “coin” in it’s name. Since it’s main function is to limit the amount of data a user can put on the block chain a good name for it would be Anti Bloat and Spam Token abbreviated as ABST.
 Although having programmed for more than half of my live in different languages such as Visual Basic, Fortran and C++ I do not have the intention of programming Freechain myself due to lack of time and programming skills in the field of cryptography. If you are interested to contribute please add code to this repository.
