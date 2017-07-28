@@ -158,13 +158,13 @@ A 51% attack (http://en.bitcoinwiki.org/Bitcoin_weaknesses#51.25_attack) is at f
 
 However the risk of double issuing contradicting records has to be considered. It is important to understand exactly what a 51% attacker can and what he cannot do. The first and foremost requirement is that a 51% attacker can only succeed if the victim (or a third party!) has no objective reason to distrust the attacker. Consequently the attacker cannot violate any of the rules a blockchain is based on. This excludes therefore the following possibilities:
 
-•	An attacker cannot spend tokens from other addresses where he has no private key for.
-•	Alter the Freechain software without consensus.
-•	Cannot issue false records with somebody else’s originator signature where he has no private key for.
+*	An attacker cannot spend tokens from other addresses where he has no private key for.
+*	Alter the Freechain software without consensus.
+*	Cannot issue false records with somebody else’s originator signature where he has no private key for.
 The following actions are possible for a 51% attacker:
-•	disconfirm others’ blocks confirming only their own, thus receive 100% of all new tokens.
-•	block any transaction at his discretion.
-•	create 2 (or more!) competing versions of the blockchain. If he has enough hash power and time he can go further back in time and produce an alternate chain which when it has reached equal length as the true chain cannot be revealed as the attack chain by a third party. This is probably the most dangerous scenario for Freechain and blockchains in general.
+*	disconfirm others’ blocks confirming only their own, thus receive 100% of all new tokens.
+*	block any transaction at his discretion.
+*	create 2 (or more!) competing versions of the blockchain. If he has enough hash power and time he can go further back in time and produce an alternate chain which when it has reached equal length as the true chain cannot be revealed as the attack chain by a third party. This is probably the most dangerous scenario for Freechain and blockchains in general.
 
 ### 6.2	Defense mechanisms against a 51% attack
 
